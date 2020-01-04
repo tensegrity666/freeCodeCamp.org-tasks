@@ -1,20 +1,103 @@
 :root {
-  --background-page: linear-gradient(60deg, rgb(58, 4, 94), rgb(18, 3, 87));
+  --background-page: rgb(58, 4, 94);
   --background-form:  rgba(2, 2, 32, 0.5) ;
   --text: rgb(241, 241, 241);
   --border: rgba(241, 241, 241, 0.3);
   --button: rgb(32, 207, 76);
 
+  --gradient1: rgba(16, 212, 163, 0.1);
+  --gradient2: rgba(58, 4, 94, 0.1);
+  --gradient3: rgba(36, 3, 182, 0.1);
+
   font-size: 10px;
 }
 
+@keyframes background-grad {
+  0% {
+    background-image: linear-gradient(0deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  5% {
+    background-image: linear-gradient(18deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  10% {
+    background-image: linear-gradient(36deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  15% {
+    background-image: linear-gradient(54deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  20% {
+    background-image: linear-gradient(72deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  25% {
+    background-image: linear-gradient(90deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  30% {
+    background-image: linear-gradient(108deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  35% {
+    background-image: linear-gradient(126deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  40% {
+    background-image: linear-gradient(144deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  45% {
+    background-image: linear-gradient(162deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  50% {
+    background-image: linear-gradient(180deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  55% {
+    background-image: linear-gradient(198deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  60% {
+    background-image: linear-gradient(216deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  65% {
+    background-image: linear-gradient(234deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  70% {
+    background-image: linear-gradient(252deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  75% {
+    background-image: linear-gradient(270deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  80% {
+    background-image: linear-gradient(288deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  85% {
+    background-image: linear-gradient(306deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  95% {
+    background-image: linear-gradient(324deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+  100% {
+    background-image: linear-gradient(342deg, var(--gradient1), var(--gradient2), var(--gradient3));
+  }
+}
+
+html {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  backdrop-filter: blur(5px) contrast(0.8) opacity(0.3);
+}
+
 .page {
+  position: relative;
   max-width: 1400px;
-  background: var(--background-page);
+  background-color: var(--background-page);
+  background-image: url(/img/action.jpg);
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
   color: var(--text);
   font-size: 1em;
 }
+
 
 #title {
   text-align: center;
@@ -40,6 +123,11 @@
   padding: 50px;
   border: 1px solid var(--border);
   border-radius: 10px;
+
+  animation-name: background-grad;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-timing-function: linear;
 }
 
 .label {
