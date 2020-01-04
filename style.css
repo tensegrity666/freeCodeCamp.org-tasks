@@ -1,0 +1,11 @@
+.page {
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(45deg, lime, purple);
+}
+
+#survey-form {
+  width: 60vw;
+  background-color: purple;
+  opacity: 0.8;
+}
