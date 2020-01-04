@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
   <title>Survey Form</title>
 </head>
-<body>
+<body class="page">
+
   <header>
     <h1 id="title">freeCodeCamp Survey Form</h1>
     <p id="description">Thank you for taking the time to help us improve the
@@ -14,19 +16,19 @@
   </header>
   <main>
     <form id="survey-form" action="https://echo.htmlacademy.ru" method="POST">
-      <label id="name-label" for="name">Name
+      <label class="label" id="name-label" for="name">Name
         <input id="name" type="text" name="name" placeholder="Enter your name" required>
       </label>
-      <label id="email-label" for="email">E-mail
+      <label class="label" id="email-label" for="email">E-mail
         <input id="email" type="email" name="email"
           placeholder="example@email.com" required>
       </label>
-      <label id="number-label" for="number">Age (optional)
+      <label class="label" id="number-label" for="number">Age (optional)
         <input id="number" type="number" name="age" placeholder="21" min="18" max="101">
       </label>
 
-      <label for="role">Which option best describes your current role?
-        <select name="role" id="role" required>
+      <label class="label" for="dropdown">Which option best describes your current role?
+        <select id="dropdown" name="role" required>
           <option disabled selected>Select an option</option>
           <option value="student">Student</option>
           <option value="job">Full-time job</option>
@@ -36,23 +38,24 @@
           </select>
       </label>
 
-      <fieldset>
+      <fieldset class="fieldset">
         <legend>Would you recommend freeCodeCamp to a friend?</legend>
-        <label for="definetly">Definitely
-          <input type="radio" name="user-recommend" id="definetly"
-            value="definetly">
-        </label>
-        <label for="maybe">Maybe
-          <input type="radio" name="user-recommend" id="maybe"
-            value="maybe">
-        </label>
-        <label for="no">Not sure
-          <input type="radio" name="user-recommend" id="no" value="no">
-        </label>
+          <label class="label label__check" for="definetly">
+            <input type="radio" name="user-recommend" id="definetly"
+              value="definetly">Definitely
+          </label>
+          <label class="label label__check" for="maybe">
+            <input type="radio" name="user-recommend" id="maybe"
+              value="maybe">Maybe
+          </label>
+          <label class="label label__check" for="no">
+            <input type="radio" name="user-recommend" id="no" value="no">Not
+            sure
+          </label>
       </fieldset>
 
-      <label for="feature">What is your favorite feature of freeCodeCamp?
-        <select name="feature" id="feature" required>
+      <label class="label" for="feature">What is your favorite feature of freeCodeCamp?
+        <select id="feature" name="feature" required>
           <option disabled selected>Select an option</option>
           <option value="challenges">Challenges</option>
           <option value="projects">Projects</option>
@@ -61,53 +64,60 @@
         </select>
       </label>
 
-      <fieldset>
-        <legend>What would you like to see improved? <span>(Check all that
+      <fieldset class="fieldset">
+        <legend>What would you like to see improved?<span>(Check all that
             apply)</span></legend>
-        <label for="frontend">Front-end Projects
-          <input type="checkbox" name="mostLike" id="frontend" value="frontend">
-        </label>
-        <label for="backend">Back-end Projects
-          <input type="checkbox" name="mostLike" id="backend" value="backend">
-        </label>
-        <label for="dataVisual">Data Visualization
-          <input type="checkbox" name="mostLike" id="dataVisual"
-            value="dataVisual">
-        </label>
-        <label for="challenges">Challenges
-          <input type="checkbox" name="mostLike" id="challenges"
-            value="challenges">
-        </label>
-        <label for="openSource">Open Source Community
-          <input type="checkbox" name="mostLike" id="openSource"
-            value="openSource">
-        </label>
-        <label for="glitter">Gitter help rooms
-          <input type="checkbox" name="mostLike" id="glitter" value="glitter">
-        </label>
-        <label for="videos">Videos
-          <input type="checkbox" name="mostLike" id="videos" value="videos">
-        </label>
-        <label for="meetups">City Meetups
-          <input type="checkbox" name="mostLike" id="meetups" value="meetups">
-        </label>
-        <label for="wiki">Wiki
-          <input type="checkbox" name="mostLike" id="wiki" value="wiki">
-        </label>
-        <label for="courses">Additional Courses
-          <input type="checkbox" name="mostLike" id="courses" value="courses">
-        </label>
-        <label for="forum">Forum
-          <input type="checkbox" name="mostLike" id="forum" value="forum">
-        </label>
+          <label class="label label__check" for="frontend">
+            <input type="checkbox" name="mostLike" id="frontend"
+              value="frontend">Front-end Projects
+          </label>
+          <label class="label label__check" for="backend">
+            <input type="checkbox" name="mostLike" id="backend"
+              value="backend">Back-end Projects
+          </label>
+          <label class="label label__check" for="dataVisual">
+            <input type="checkbox" name="mostLike" id="dataVisual"
+              value="dataVisual">Data Visualization
+          </label>
+          <label class="label label__check" for="challenges">
+            <input type="checkbox" name="mostLike" id="challenges"
+              value="challenges">Challenges
+          </label>
+          <label class="label label__check" for="openSource">
+            <input type="checkbox" name="mostLike" id="openSource"
+              value="openSource">Open Source Community
+          </label>
+          <label class="label label__check" for="glitter">
+            <input type="checkbox" name="mostLike" id="glitter"
+              value="glitter">Gitter help rooms
+          </label>
+          <label class="label label__check" for="videos">
+            <input type="checkbox" name="mostLike" id="videos"
+              value="videos">Videos
+          </label>
+          <label class="label label__check" for="meetups">
+            <input type="checkbox" name="mostLike" id="meetups"
+              value="meetups">City Meetups
+          </label>
+          <label class="label label__check" for="wiki">
+            <input type="checkbox" name="mostLike" id="wiki" value="wiki">Wiki
+          </label>
+          <label class="label label__check" for="courses">
+            <input type="checkbox" name="mostLike" id="courses"
+              value="courses">Additional Courses
+          </label>
+          <label class="label label__check" for="forum">
+            <input type="checkbox" name="mostLike" id="forum"
+              value="forum">Forum
+          </label>
       </fieldset>
 
-      <label for="text">Any comments or suggestions?
+      <label class="label" for="text">Any comments or suggestions?
         <textarea name="comment" id="text" cols="30" rows="10"
           placeholder="Enter your comment here..."></textarea>
       </label>
 
-      <button type="submit">Submit</button>
+      <button id="submit" type="submit">Submit</button>
     </form>
 
   </main>
