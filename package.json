@@ -1,0 +1,29 @@
+{
+  "name": "surveyform",
+  "version": "1.0.0",
+  "description": "Responsive Web Design Projects - Build a Survey Form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tensegrity666/freeCodeCamp.org-tasks.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "freecodeccamp"
+  ],
+  "author": "Roman Yakovlev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tensegrity666/freeCodeCamp.org-tasks/issues"
+  },
+  "homepage": "https://github.com/tensegrity666/freeCodeCamp.org-tasks#readme",
+  "devDependencies": {
+    "stylelint": "^12.0.1",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-standard": "^19.0.0"
+  }
+}
