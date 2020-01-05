@@ -1,15 +1,21 @@
 :root {
   --background-page: rgb(58, 4, 94);
-  --background-form:  rgba(2, 2, 32, 0.5) ;
+  --background-form: rgba(2, 2, 32, 0.5);
+  --background-input-text: rgba(2, 2, 32, 0.9);
   --text: rgb(241, 241, 241);
-  --border: rgba(241, 241, 241, 0.3);
+  --border: rgba(49, 57, 131, 0.3);
   --button: rgb(32, 207, 76);
+  --button-hover: rgb(24, 177, 62);
+  --button-active: rgb(18, 145, 50);
 
   --gradient1: rgba(16, 212, 163, 0.1);
   --gradient2: rgba(58, 4, 94, 0.1);
   --gradient3: rgba(36, 3, 182, 0.1);
 
-  font-size: 10px;
+  --checkbox-radio-size: 24px;
+  --input-height: 50px;
+
+  font-size: 12px;
 }
 
 @keyframes background-grad {
@@ -88,7 +94,7 @@ html {
 
 .page {
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   background-color: var(--background-page);
   background-image: url(/img/action.jpg);
   background-position: center;
@@ -96,6 +102,9 @@ html {
   margin: 0 auto;
   color: var(--text);
   font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
 }
 
 
@@ -110,14 +119,15 @@ html {
   width: 720px;
   margin: 0 auto;
   text-align: center;
-  font-size: 2.4em;
-  margin-bottom: 60px;
+  font-size: 2.2em;
+  font-style: italic;
+  margin-bottom: 40px;
 }
 
 #survey-form {
   display: flex;
   flex-flow: column nowrap;
-  width: 720px;
+  width: 640px;
   margin: 0 auto;
   background-color: var(--background-form);
   padding: 50px;
@@ -126,8 +136,29 @@ html {
 
   animation-name: background-grad;
   animation-iteration-count: infinite;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-timing-function: linear;
+}
+
+#submit {
+  width: 100%;
+  height: 50px;
+  background-color: var(--button);
+  border: none;
+  border-radius: 5px;
+  font-size: 2.4rem;
+  margin: 0 auto;
+  color: var(--text);
+  transition: all 0.1s;
+}
+
+#submit:hover {
+  background-color: var(--button-hover);
+  transition: all 0.1s;
+}
+
+#submit:active {
+  background-color: var(--button-active);
 }
 
 .label {
@@ -144,5 +175,48 @@ html {
 
 .fieldset {
   border: none;
-  margin-bottom: 60px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.input-description {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.input-description__small {
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.checkbox,
+.radio {
+  width: var(--checkbox-radio-size);
+  height: var(--checkbox-radio-size);
+  margin: 0;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.input-field {
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--input-height);
+  padding: 5px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--background-input-text);
+}
+
+.input-field__select {
+  height: var(--input-height);
+}
+
+.input-field__textarea {
+  height: 150px;
+  resize: none;
 }
