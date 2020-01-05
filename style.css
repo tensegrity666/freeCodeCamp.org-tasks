@@ -7,11 +7,9 @@
   --button: rgb(32, 207, 76);
   --button-hover: rgb(24, 177, 62);
   --button-active: rgb(18, 145, 50);
-
   --gradient1: rgba(16, 212, 163, 0.1);
   --gradient2: rgba(58, 4, 94, 0.1);
   --gradient3: rgba(36, 3, 182, 0.1);
-
   --checkbox-radio-size: 24px;
   --input-height: 50px;
 
@@ -22,133 +20,150 @@
   0% {
     background-image: linear-gradient(0deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   5% {
     background-image: linear-gradient(18deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   10% {
     background-image: linear-gradient(36deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   15% {
     background-image: linear-gradient(54deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   20% {
     background-image: linear-gradient(72deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   25% {
     background-image: linear-gradient(90deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   30% {
     background-image: linear-gradient(108deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   35% {
     background-image: linear-gradient(126deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   40% {
     background-image: linear-gradient(144deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   45% {
     background-image: linear-gradient(162deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   50% {
     background-image: linear-gradient(180deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   55% {
     background-image: linear-gradient(198deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   60% {
     background-image: linear-gradient(216deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   65% {
     background-image: linear-gradient(234deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   70% {
     background-image: linear-gradient(252deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   75% {
     background-image: linear-gradient(270deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   80% {
     background-image: linear-gradient(288deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   85% {
     background-image: linear-gradient(306deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   95% {
     background-image: linear-gradient(324deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
+
   100% {
     background-image: linear-gradient(342deg, var(--gradient1), var(--gradient2), var(--gradient3));
   }
 }
 
 html {
-  content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: auto;
+  content: "";
   backdrop-filter: blur(5px) contrast(0.8) opacity(0.3);
 }
 
 .page {
   position: relative;
+  box-sizing: border-box;
   max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--text);
   background-color: var(--background-page);
   background-image: url(/img/action.jpg);
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
-  color: var(--text);
-  font-size: 1em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  box-sizing: border-box;
 }
 
-
 #title {
-  text-align: center;
-  font-size: 4em;
   margin-top: 60px;
   margin-bottom: 30px;
+  font-size: 4em;
+  text-align: center;
 }
 
 #description {
   width: 720px;
   margin: 0 auto;
-  text-align: center;
+  margin-bottom: 40px;
   font-size: 2.2em;
   font-style: italic;
-  margin-bottom: 40px;
+  text-align: center;
 }
 
 #survey-form {
   display: flex;
   flex-flow: column nowrap;
   width: 640px;
+  padding: 50px;
   margin: 0 auto;
   background-color: var(--background-form);
-  padding: 50px;
   border: 1px solid var(--border);
   border-radius: 10px;
-
   animation-name: background-grad;
-  animation-iteration-count: infinite;
   animation-duration: 10s;
   animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 #submit {
   width: 100%;
   height: 50px;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  color: var(--text);
   background-color: var(--button);
   border: none;
   border-radius: 5px;
-  font-size: 2.4rem;
-  margin: 0 auto;
-  color: var(--text);
   transition: all 0.1s;
 }
 
@@ -174,28 +189,27 @@ html {
 }
 
 .fieldset {
-  border: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   margin-bottom: 50px;
+  border: none;
 }
 
 .input-description {
-  font-size: 2em;
   margin-bottom: 5px;
+  font-size: 2em;
 }
 
 .input-description__small {
-  font-style: italic;
   font-size: 1.8rem;
+  font-style: italic;
 }
 
 .checkbox,
 .radio {
   width: var(--checkbox-radio-size);
   height: var(--checkbox-radio-size);
-  margin: 0;
-  margin-right: 10px;
+  margin: 6px 10px 6px 0;
   border-radius: 5px;
 }
 
@@ -205,11 +219,11 @@ html {
   height: var(--input-height);
   padding: 5px 15px;
   margin: 5px 0;
-  border-radius: 5px;
-  border: none;
-  font-style: italic;
   font-size: 2rem;
+  font-style: italic;
   color: var(--background-input-text);
+  border: none;
+  border-radius: 5px;
 }
 
 .input-field__select {
