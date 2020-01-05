@@ -132,7 +132,7 @@ html {
 }
 
 #description {
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto;
   margin-bottom: 40px;
   font-size: 2.2em;
@@ -141,6 +141,7 @@ html {
 }
 
 #survey-form {
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   width: 640px;
@@ -233,4 +234,62 @@ html {
 .input-field__textarea {
   height: 150px;
   resize: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    backdrop-filter: none;
+  }
+
+  .page {
+    max-width: 100%;
+    margin: 0 auto;
+    background: var(--background-page);
+  }
+
+  #survey-form {
+    width: 700px;
+    padding: 20px;
+    padding-bottom: 60px;
+  }
+
+  #title {
+    margin-top: 20px;
+    font-size: 3.5em;
+  }
+
+  #description {
+    font-size: 1.8em;
+  }
+
+  .input-description__small {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .page {
+    margin: 1px;
+    font-size: 0.8em;
+  }
+
+  #survey-form {
+    width: 340px;
+    padding: 20px 10px;
+    padding-bottom: 40px;
+  }
+
+  #description {
+    font-size: 1.4em;
+    margin: 10px;
+  }
+
+  .input-field {
+    font-size: 1.8rem;
+  }
+
+  .checkbox,
+  .radio {
+    margin: 3px 7px 4px 0;
+  }
 }
