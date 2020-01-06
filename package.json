@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Responsive Web Design Projects - Build a Survey Form",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tensegrity666/freeCodeCamp.org-tasks.git"
@@ -13,7 +10,7 @@
   "keywords": [
     "html",
     "css",
-    "freecodeccamp"
+    "freecodecamp"
   ],
   "author": "Roman Yakovlev",
   "license": "ISC",
